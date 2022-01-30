@@ -20,6 +20,9 @@ require_once 'include/db_connect.php';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+  <script type="text/javascript" src="js/script.js">
+
+  </script>
   <title>Панель управления</title>
 </head>
 <body>

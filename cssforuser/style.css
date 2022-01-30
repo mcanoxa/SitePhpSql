@@ -1010,10 +1010,10 @@ footer a{
     }
 
 
-    #block-right{
+    #block-body, #block-right{
       width: 100%;
       background-color: #e5ddd2;
-      float: right;
+      float: letf;
 
     }
 
@@ -1021,6 +1021,7 @@ footer a{
 
     #block-parametr{
       width: 250px;
+      background-color: #e5ddd2;
       margin-top: 10px;
       height: auto;
       margin-left: 150px;

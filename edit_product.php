@@ -124,8 +124,8 @@ echo '
             <li>
               <label>Категория товара</label>
               <select  name="form_type" id="type" size="1">
-                <option value="Кофе">Кофе</option>
-                <option value="Чай">Чай</option>
+                <option value="Бургеры">Бургеры</option>
+                <option value="Картофель">Картофель и снеки</option>
               </select>
             </li>
           </ul>

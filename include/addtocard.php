@@ -3,7 +3,7 @@
 
     require_once 'db_connect.php';
     $id = $_POST["id"];
-
+    
     $result = $link->query("SELECT * FROM `card` WHERE `card_ip` = '{$_SERVER['REMOTE_ADDR']}' AND `card_id_product` = '$id'");
     if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_array($result);

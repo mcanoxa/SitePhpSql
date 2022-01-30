@@ -24,5 +24,8 @@ defined('shop') or die('Доступ запрещен!');
     <li>
       <a href="reg.php">Пользователи</a>
     </li>
+    <li>
+      <a href="regCustomers.php">Заказчики</a>
+    </li>
   </ul>
 </div>

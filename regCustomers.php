@@ -33,47 +33,28 @@ require_once 'blockForAdmin/header.php';
  ?>
  <?php
  $num = 0;
- if (isset($_POST['reg_login']) && isset($_POST['reg_pass']) && isset($_POST['reg_pass_again'])) {
-   $login = $_POST['reg_login'];
-   $pass = $_POST['reg_pass'];
-   $pass_again = $_POST['reg_pass_again'];
+ if (isset($_POST['reg_name']) && isset($_POST['reg_address']) && isset($_POST['reg_phone'])) {
+   $reg_name = $_POST['reg_name'];
+   $reg_address = $_POST['reg_address'];
+   $reg_phone = $_POST['reg_phone'];
 
- if ($pass !=$pass_again) {
-   $fmsg = "Пароли не совпадают";
-   $num = 1;
- }
- if (strlen($pass) < 7 or strlen($pass) > 15){
-   $fmsg = "Укажите пароль от 7 до 15 символов!";
-   $num = 1;
- }
 
- if (strlen($login) < 5 or strlen($login) > 30)
-   {
-      $fmsg = "Логин должен быть от 5 до 30 символов!";
-      $num = 1;
 
-    }
-   else
-   {
-    $res = $link->query("SELECT * FROM `login` WHERE `login` = '$login'");
+    $res = $link->query("SELECT * FROM `customer` WHERE `phone` = '$reg_phone'");
    If (mysqli_num_rows($res) > 0)
    {
-      $fmsg = "Логин занят!";
+      $fmsg = "Заказчик уже зарегистрирован";
       $num = 1;
 
    }
- }
+
  if ($num === 0) {
-   $pass   = md5($pass);
-   $pass   = strrev($pass);
-   $pass   = "9nm2rv8q".$pass."2yo6z";
 
-   $ip = $_SERVER['REMOTE_ADDR'];
- $query = "INSERT INTO  `login`(`login`,`password`)
+ $query = "INSERT INTO  `customer`(`name`,`address`, `phone`)
    						VALUES(
-   							'$login',
-   							'$pass'
-
+   							'$reg_name',
+   							'$reg_address',
+                '$reg_phone',
    						)";
  $result = mysqli_query($link,$query);
 
@@ -89,7 +70,7 @@ require_once 'blockForAdmin/header.php';
   ?>
 <div id="block-content">
 <div id="block-parametrs">
-  <p id="title-page">Добавление пользователей</p>
+  <p id="title-page">Добавление заказчика</p>
 </div>
 <form class="" method="post" id="form_reg">
   <?php if (isset($smsg)){ ?><div class="alert alert-success" role="alert"><?php echo $smsg; ?> </div><?php } ?>
@@ -97,18 +78,18 @@ require_once 'blockForAdmin/header.php';
 <div id="block-form-registration" class="block-form-registration">
 <ul id="form-registration">
     <li>
-    <label>Логин</label>
-    <input type="text" name="reg_login" id="reg_login" />
+    <label>ФИО/Организация</label>
+    <input type="text" name="reg_name" id="reg_name" />
     </li>
 
     <li>
-    <label>Пароль</label>
-    <input type="password" name="reg_pass" id="reg_pass" />
+    <label>Адрес</label>
+    <input type="text" name="reg_address" id="reg_address" />
     </li>
     <li>
 
-    <label>Подтверждение пароля</label>
-    <input type="password" name="reg_pass_again" id="reg_pass_again" />
+    <label>Номер телефона</label>
+    <input type="text" name="reg_phone" id="reg_phone" />
     </li>
   </ul>
   <p align="right">
