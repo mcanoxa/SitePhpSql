@@ -10,7 +10,7 @@ defined('shop') or die('Доступ запрещен!');
 
  <div id="block-header2">
    <p align="right">
-     <a href="#">Администраторы</a> | <a href="?logout">Выход</a>
+     <a href="#">Администраторы</a> | <a href="../mainforuser.php">Выход</a>
    </p>
  </div>
 </div>

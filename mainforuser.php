@@ -25,6 +25,47 @@ require_once 'include/db_connect.php';
   require_once "block/header.php";
   require_once "block/nav.php";
 ?>
+  <div id="block-body">
+    <div id="block-right">
+    
+        <?php
+          require_once "block/block-parameter.php";
+         ?>
+
+
+    </div>
+    <div class="sec_2">
+
+      <?php
+
+    	$result =  mysqli_query($link, "SELECT * FROM `product`");
+    							if(mysqli_num_rows($result) > 0) {
+    									$row = mysqli_fetch_array($result);
+    									do {
+    											echo('
+                        <li>
+    												<div class="block-images-grid">
+    													<img src="img/'.$row["img"].'" />
+    												</div>
+    												<p class="style-name-grid"><a href="view_content.php?id='.$row["id"].'">'.$row["name"].'</a></p>
+    												<a  class="add-cart-style-grid" tid="'.$row["id"].'"></a>
+                    			  <p class="style-price-grid">'.$row["price"].' руб.</p>
+                          </li>
+
+    											');
+    									}
+    									while ($row = mysqli_fetch_array($result));
+    							}
+
+    					?>
+    					</ul>
+
+    	</div>
+
+
+
+
+  </div>
 
 
 

@@ -7,7 +7,7 @@ require '/include/db_connect.php'; ?>
   <div class="heading clearfix" id="down">
 
 
-    <a href="index.php"><img src="../img/burger.png" alt="this is star" class="logo"></a>
+    <a href="mainforuser.php"><img src="../img/burger.png" alt="this is star" class="logo"></a>
     <nav>
       <ul class="menu" id="menu">
         <li><a href="category_burger.php?category=Бургеры">Бургеры</a></li>
@@ -58,6 +58,13 @@ require '/include/db_connect.php'; ?>
 </p>
     </nav>
 
+  </div>
+  <!-- Поиск -->
+  <div id="block-search">
+    <form class="" action="search.php" method="GET">
+        <input type="text" id="input-search" name="q" value="" placeholder="Поиск среди более 100 000 товаров">
+        <input type="submit" id="button-search" name="" value="Поиск">
+    </form>
   </div>
 </section>
 <script type="text/javascript">

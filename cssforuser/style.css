@@ -108,7 +108,7 @@ html, body {
     nav {
       float:right;
       margin-top: 65px;
-      margin-bottom:20px;
+      margin-bottom:30px;
     }
     .menu {
     padding:0;
@@ -146,7 +146,7 @@ html, body {
     	width: 100%;
     }
 
-  
+
 
     .clearfix:after {
        content:'';
@@ -977,4 +977,104 @@ footer a{
 
     #content-price{
       font-weight: bold;
+    }
+
+    #block-search{
+      width: 390px;
+      height: auto;
+      /* margin-left: 700px; */
+      float: right;
+      margin-top: -28px;
+
+      /* margin-bottom: 20px; */
+
+    }
+    #block-search input#input-search{
+      width: 280px;
+      height: 25px;
+      border: 1px solid #EF8515;
+      font-size: 16px;
+
+
+    }
+
+    #button-search{
+      width: 75px;
+      height: 30px;
+      border: 1px solid #EF8515;
+      margin-left: 10px;
+      padding: 4px 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+    #block-right{
+      width: 100%;
+      background-color: #e5ddd2;
+      float: right;
+
+    }
+
+
+
+    #block-parametr{
+      width: 250px;
+      margin-top: 10px;
+      height: auto;
+      margin-left: 150px;
+      border: 3px solid #7d0002;
+      border-radius: 10px;
+      padding: 10px;
+
+    }
+
+    .title-filter{
+      font-size: 15px;
+      font-weight: bold;
+
+    }
+
+    #block-input-price li{
+      float: left;
+      margin-left: 10px;
+    }
+
+    #block-input-price input{
+      width: 45px;
+      height: 20px;
+      font-size: 15px;
+      border: 1px solid #EF8515;
+      padding-left: 3px;
+    }
+
+    #block-input-price p{
+      float: left;
+      font-size: 15px;
+      margin-top: 0;
+      padding-top: 2px;
+    }
+
+    #blocktrackbar{
+      width: 220px;
+      height: 20px;
+      border: 1px solid black;
+      margin-top: 20px;
+      clear: both;
+    }
+
+    #button-param-search{
+      width: 81px;
+      height: 27px;
+      margin-top: 20px;
+        border: 1px solid #EF8515;
+        cursor: pointer;
+    }
+
+    .header-title{
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 10px;
     }
