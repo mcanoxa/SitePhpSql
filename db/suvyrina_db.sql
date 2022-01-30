@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 30 2022 г., 17:15
+-- Время создания: Янв 30 2022 г., 17:17
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.3.29
 
@@ -35,14 +35,6 @@ CREATE TABLE IF NOT EXISTS `card` (
   `card_ip` varchar(100) NOT NULL,
   `login` varchar(150) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `card`
---
-
-INSERT INTO `card` (`card_id`, `card_id_product`, `card_price`, `card_count`, `card_datetime`, `card_ip`, `login`) VALUES
-(7, 1, 370, 1, '2022-01-30 16:41:50', '127.0.0.1', ''),
-(8, 2, 550, 1, '2022-01-30 16:41:51', '127.0.0.1', '');
 
 -- --------------------------------------------------------
 
